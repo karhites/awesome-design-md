@@ -1,0 +1,275 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=e3]:
+    - navigation "Primary" [ref=e4]:
+      - link "SilverSea Asset Management" [ref=e5] [cursor=pointer]:
+        - /url: "#top"
+        - generic [ref=e7]: SilverSea
+      - list [ref=e8]:
+        - listitem [ref=e9]:
+          - link "About" [ref=e10] [cursor=pointer]:
+            - /url: "#about"
+        - listitem [ref=e11]:
+          - link "Services" [ref=e12] [cursor=pointer]:
+            - /url: "#services"
+        - listitem [ref=e13]:
+          - link "Philosophy" [ref=e14] [cursor=pointer]:
+            - /url: "#philosophy"
+        - listitem [ref=e15]:
+          - link "Relationships" [ref=e16] [cursor=pointer]:
+            - /url: "#relationships"
+        - listitem [ref=e17]:
+          - link "Career opportunities — we are hiring" [ref=e18] [cursor=pointer]:
+            - /url: "#careers"
+            - text: We're hiring
+      - link "Contact us" [ref=e20] [cursor=pointer]:
+        - /url: "#contact"
+  - main [ref=e21]:
+    - generic [ref=e24]:
+      - generic [ref=e25]:
+        - heading "For the wealth you've already built." [level=1] [ref=e26]:
+          - generic [ref=e27]:
+            - generic [ref=e28]: F
+            - generic [ref=e29]: o
+            - generic [ref=e30]: r
+            - generic [ref=e32]: t
+            - generic [ref=e33]: h
+            - generic [ref=e34]: e
+            - generic [ref=e36]: w
+            - generic [ref=e37]: e
+            - generic [ref=e38]: a
+            - generic [ref=e39]: l
+            - generic [ref=e40]: t
+            - generic [ref=e41]: h
+          - generic [ref=e42]:
+            - generic [ref=e43]: "y"
+            - generic [ref=e44]: o
+            - generic [ref=e45]: u
+            - generic [ref=e46]: "'"
+            - generic [ref=e47]: v
+            - generic [ref=e48]: e
+            - generic [ref=e50]: a
+            - generic [ref=e51]: l
+            - generic [ref=e52]: r
+            - generic [ref=e53]: e
+            - generic [ref=e54]: a
+            - generic [ref=e55]: d
+            - generic [ref=e56]: "y"
+            - generic [ref=e58]: b
+            - generic [ref=e59]: u
+            - generic [ref=e60]: i
+            - generic [ref=e61]: l
+            - generic [ref=e62]: t
+            - generic [ref=e63]: .
+        - paragraph [ref=e64]: An independent, Singapore-based Multi-Family Office for accredited principals and single-family offices since 2011.
+        - generic [ref=e65]:
+          - link "Arrange a private introduction" [ref=e66] [cursor=pointer]:
+            - /url: "#contact"
+          - link "Our philosophy" [ref=e67] [cursor=pointer]:
+            - /url: "#philosophy"
+      - complementary [ref=e68]:
+        - generic [ref=e69]: Stewardship. Investments. Advisory.
+    - generic [ref=e71]:
+      - generic [ref=e72]: About Us
+      - heading "A quiet family office. Built for principals." [level=2] [ref=e73]:
+        - text: A quiet family office.
+        - text: Built for principals.
+      - paragraph [ref=e74]: Since 2011, SilverSea has served a deliberately small roster of accredited private clients and single-family offices from Singapore — advising on wealth that has already been made, across generations and jurisdictions. Independent, MAS-regulated, owner-operated.
+      - generic [ref=e75]:
+        - generic [ref=e76]:
+          - generic [ref=e77]: 15 yrs
+          - generic [ref=e78]: Serving principals since 2011
+        - generic [ref=e79]:
+          - generic [ref=e80]: MAS
+          - generic [ref=e81]: Regulated · Licence CMS100457-1
+        - generic [ref=e82]:
+          - generic [ref=e83]: Multi-bank
+          - generic [ref=e84]: Your custodian · your name · LPOA only
+    - generic [ref=e86]:
+      - generic [ref=e87]:
+        - generic [ref=e88]: Services
+        - heading "No product shelf. No platform fees. No conflicts." [level=2] [ref=e89]:
+          - text: No product shelf.
+          - text: No platform fees. No conflicts.
+        - paragraph [ref=e90]: By listening to your needs and objectives, we work with you to create a bespoke investment solution — not a basket of in-house product. Senior advisors, direct line, decisions made in Singapore.
+      - generic [ref=e91]:
+        - article [ref=e92]:
+          - generic [ref=e93]: 01 / Multi-Family Office
+          - heading "Multi-Family Office" [level=3] [ref=e94]
+          - paragraph [ref=e95]: Estate planning, legacy planning and insurance coordination across generations and jurisdictions.
+          - list [ref=e96]:
+            - listitem [ref=e97]: Intergenerational structuring
+            - listitem [ref=e98]: Legacy & succession
+            - listitem [ref=e99]: Insurance coordination
+        - article [ref=e100]:
+          - generic [ref=e101]: 02 / Independent Advice
+          - heading "Independent Advice" [level=3] [ref=e102]
+          - paragraph [ref=e103]: Access to investment opportunities through our extensive network — aligned to your goals, not to shelf economics.
+          - list [ref=e104]:
+            - listitem [ref=e105]: Open-architecture access
+            - listitem [ref=e106]: Independent due diligence
+            - listitem [ref=e107]: Conflict-free recommendations
+        - article [ref=e108]:
+          - generic [ref=e109]: 03 / Private Banks
+          - heading "Private Banks" [level=3] [ref=e110]
+          - paragraph [ref=e111]: Clients select their custodian bank. SilverSea holds a Limited Power of Attorney only — assets never leave your name.
+          - list [ref=e112]:
+            - listitem [ref=e113]: Client-selected custodian
+            - listitem [ref=e114]: Limited Power of Attorney
+            - listitem [ref=e115]: Full ownership retained
+        - article [ref=e116]:
+          - generic [ref=e117]: 04 / Discretionary & Advisory
+          - heading "Discretionary & Advisory Mandates" [level=3] [ref=e118]
+          - paragraph [ref=e119]: Investment management aligned with your goals — whether you prefer full delegation or a collaborative advisory relationship.
+          - list [ref=e120]:
+            - listitem [ref=e121]: Discretionary portfolios
+            - listitem [ref=e122]: Advisory mandates
+            - listitem [ref=e123]: Custom risk frameworks
+    - generic [ref=e126]:
+      - generic [ref=e127]: Investment Philosophy
+      - heading "Diversification is key." [level=2] [ref=e128]
+      - paragraph [ref=e129]: Rigorous due diligence and evaluation processes are used for each investment opportunity. Understanding and managing the downside risk is essential — capital preservation comes before capital growth.
+      - generic [ref=e130]:
+        - generic [ref=e131]:
+          - heading "Diversification" [level=3] [ref=e133]
+          - paragraph [ref=e134]: Across asset classes, geographies, managers and time horizons.
+        - generic [ref=e135]:
+          - heading "Absolute returns" [level=3] [ref=e137]
+          - paragraph [ref=e138]: Positive returns targeted across cycles — not benchmark-hugging.
+        - generic [ref=e139]:
+          - heading "Hedged exposures" [level=3] [ref=e141]
+          - paragraph [ref=e142]: Long and short positioning to temper drawdowns and isolate conviction.
+        - generic [ref=e143]:
+          - heading "Downside discipline" [level=3] [ref=e145]
+          - paragraph [ref=e146]: Position sizing governed by loss tolerance, not upside dreams.
+    - generic [ref=e148]:
+      - generic [ref=e149]:
+        - generic [ref=e150]: Relationships
+        - heading "Your bank. Your custody. Your name on every asset." [level=2] [ref=e151]:
+          - text: Your bank. Your custody.
+          - text: Your name on every asset.
+        - paragraph [ref=e152]: We hold established relationships with reputable private banks across Switzerland, Singapore and Liechtenstein. You choose the custodian. SilverSea operates only under a Limited Power of Attorney — you retain full control and ownership of your assets at all times.
+        - list [ref=e153]:
+          - listitem [ref=e154]: Client-selected custodian bank
+          - listitem [ref=e156]: Limited Power of Attorney only
+          - listitem [ref=e158]: Assets held in your own name
+          - listitem [ref=e160]: Independent reporting & reconciliation
+      - complementary [ref=e162]:
+        - generic [ref=e163]:
+          - generic [ref=e165]: UBS
+          - generic [ref=e166]: Julius Baer
+          - generic [ref=e167]: Pictet
+          - generic [ref=e168]: LGT
+          - generic [ref=e169]: HSBC
+          - generic [ref=e170]: DBS
+          - generic [ref=e171]: BNP
+          - generic [ref=e172]: Lombard
+        - generic [ref=e173]: Representative custodian relationships. Client chooses the bank.
+    - generic [ref=e175]:
+      - generic [ref=e176]:
+        - generic [ref=e177]: Who we are
+        - heading "Senior people. On your side of the table." [level=2] [ref=e178]:
+          - text: Senior people.
+          - text: On your side of the table.
+        - paragraph [ref=e179]: Owner-operated and deliberately small, with partners who once ran books at Swiss and Singapore private banks. You work with principals — not a junior relationship manager rotating through your account every 18 months.
+      - generic [ref=e180]:
+        - figure "Thomas Anderegg CEO & CIO · Founding Partner" [ref=e181]:
+          - generic [ref=e183]: TA
+          - generic [ref=e184]:
+            - generic [ref=e185]: Thomas Anderegg
+            - generic [ref=e186]: CEO & CIO · Founding Partner
+        - figure "Axel Ritter COO · Founding Partner" [ref=e187]:
+          - generic [ref=e189]: AR
+          - generic [ref=e190]:
+            - generic [ref=e191]: Axel Ritter
+            - generic [ref=e192]: COO · Founding Partner
+        - figure "Antoine Foetisch Partner · Wealth Advisor" [ref=e193]:
+          - generic [ref=e195]: AF
+          - generic [ref=e196]:
+            - generic [ref=e197]: Antoine Foetisch
+            - generic [ref=e198]: Partner · Wealth Advisor
+        - figure "Yoad Reiter Partner · Wealth Advisor" [ref=e199]:
+          - generic [ref=e201]: YR
+          - generic [ref=e202]:
+            - generic [ref=e203]: Yoad Reiter
+            - generic [ref=e204]: Partner · Wealth Advisor
+        - figure "Max Anderl Lead Portfolio Manager" [ref=e205]:
+          - generic [ref=e207]: MA
+          - generic [ref=e208]:
+            - generic [ref=e209]: Max Anderl
+            - generic [ref=e210]: Lead Portfolio Manager
+        - figure "Veronica Yip Wealth Advisor" [ref=e211]:
+          - generic [ref=e213]: VY
+          - generic [ref=e214]:
+            - generic [ref=e215]: Veronica Yip
+            - generic [ref=e216]: Wealth Advisor
+        - figure "Alvina Chow Wealth Advisor" [ref=e217]:
+          - generic [ref=e219]: AC
+          - generic [ref=e220]:
+            - generic [ref=e221]: Alvina Chow
+            - generic [ref=e222]: Wealth Advisor
+        - figure "Jerryln Chua Management Assistant" [ref=e223]:
+          - generic [ref=e225]: JC
+          - generic [ref=e226]:
+            - generic [ref=e227]: Jerryln Chua
+            - generic [ref=e228]: Management Assistant
+    - generic [ref=e230]:
+      - generic [ref=e231]:
+        - generic [ref=e232]: We are hiring
+        - heading "Unleash your potential." [level=2] [ref=e234]
+        - paragraph [ref=e235]: We're looking for experienced relationship managers in wealth management — professionals who want greater independence and entrepreneurial freedom, and the flexibility to work across multiple custodian banks.
+        - paragraph [ref=e236]: At SilverSea, you can deliver personalised solutions for your clients without the limitations of a larger organisation.
+        - generic [ref=e237]:
+          - link "Connect with us now" [ref=e238] [cursor=pointer]:
+            - /url: mailto:info@silverseaam.com?subject=Career%20Opportunities%20%E2%80%94%20Client%20Relationship%20Manager
+          - link "info@silverseaam.com" [ref=e239] [cursor=pointer]:
+            - /url: mailto:info@silverseaam.com
+      - complementary [ref=e240]:
+        - generic [ref=e241]: Open role
+        - heading "Client Relationship Manager" [level=3] [ref=e242]
+        - paragraph [ref=e243]: Build and steward long-term relationships with accredited private clients and family offices — with the autonomy of an independent MFO and the reach of an established multi-custodian platform.
+        - generic "Role details" [ref=e244]:
+          - generic [ref=e245]: Singapore
+          - generic [ref=e246]: Full-time
+          - generic [ref=e247]: Senior
+          - generic [ref=e248]: Wealth Management
+    - generic [ref=e250]:
+      - generic [ref=e251]: Contact us
+      - heading "By introduction. Or directly." [level=2] [ref=e252]
+      - paragraph [ref=e253]: We take on a small number of client families each year. Write or call a partner directly — first conversations are confidential and without obligation.
+      - generic [ref=e254]:
+        - link "Email info@silverseaam.com" [ref=e255] [cursor=pointer]:
+          - /url: mailto:info@silverseaam.com
+          - generic [ref=e256]: Email
+          - generic [ref=e257]: info@silverseaam.com
+        - link "Phone +65 6950 0692" [ref=e258] [cursor=pointer]:
+          - /url: tel:+6569500692
+          - generic [ref=e259]: Phone
+          - generic [ref=e260]: +65 6950 0692
+        - generic [ref=e261]:
+          - generic [ref=e262]: Office
+          - generic [ref=e263]:
+            - text: "3 Temasek Avenue, #18-22"
+            - text: Centennial Tower, Singapore 039190
+      - link "Request a private introduction" [ref=e264] [cursor=pointer]:
+        - /url: mailto:info@silverseaam.com?subject=Private%20introduction
+  - contentinfo [ref=e265]:
+    - generic [ref=e266]:
+      - generic [ref=e267]: © 2011–2026 SilverSea Asset Management Pte Ltd · MAS Licence CMS100457-1
+      - navigation "Footer" [ref=e268]:
+        - link "About Us" [ref=e269] [cursor=pointer]:
+          - /url: "#about"
+        - link "Services" [ref=e270] [cursor=pointer]:
+          - /url: "#services"
+        - link "Philosophy" [ref=e271] [cursor=pointer]:
+          - /url: "#philosophy"
+        - link "Relationship" [ref=e272] [cursor=pointer]:
+          - /url: "#relationships"
+        - link "Our Team" [ref=e273] [cursor=pointer]:
+          - /url: "#team"
+        - link "Career Opportunities" [ref=e274] [cursor=pointer]:
+          - /url: "#careers"
+        - link "Contact us" [ref=e275] [cursor=pointer]:
+          - /url: "#contact"
+    - generic [ref=e276]: This website does not constitute an investment proposal. Content may not be suitable for U.S. persons.

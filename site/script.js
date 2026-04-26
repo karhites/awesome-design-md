@@ -56,6 +56,43 @@
     }
   });
 
+  // ---------- Lazy-load section background videos ----------
+  // Each <video data-src="..."> only fetches its source when the section is
+  // approaching the viewport. Saves bandwidth on initial load.
+  const lazyVideos = document.querySelectorAll('video[data-src]');
+  if (lazyVideos.length) {
+    const hydrate = (v) => {
+      const src = v.dataset.src;
+      if (!src || v.dataset.hydrated) return;
+      v.dataset.hydrated = '1';
+      const source = document.createElement('source');
+      source.src = src;
+      source.type = 'video/mp4';
+      v.appendChild(source);
+      v.load();
+      const tryPlay = () => {
+        const p = v.play();
+        if (p && typeof p.catch === 'function') p.catch(() => {});
+      };
+      if (v.readyState >= 2) tryPlay();
+      else v.addEventListener('loadeddata', tryPlay, { once: true });
+    };
+
+    if (!reduce && 'IntersectionObserver' in window) {
+      const vio = new IntersectionObserver((entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            hydrate(e.target);
+            vio.unobserve(e.target);
+          }
+        }
+      }, { rootMargin: '300px 0px' });
+      lazyVideos.forEach((v) => vio.observe(v));
+    } else if (!reduce) {
+      lazyVideos.forEach(hydrate);
+    }
+  }
+
   // ---------- Reveal-on-scroll for downstream sections ----------
   const targets = document.querySelectorAll('.reveal');
   if (!reduce && 'IntersectionObserver' in window) {

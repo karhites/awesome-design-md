@@ -895,6 +895,10 @@ body {
   display: flex; align-items: center; justify-content: space-between;
   padding: 8px 16px;
   border-radius: 12px;
+  /* stronger backdrop than base liquid-glass so nav stays readable over bright video frames */
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
 }
 
 .topbar__brand {
@@ -927,20 +931,42 @@ body {
 
 .topbar__hiring {
   display: inline-flex; align-items: center; gap: 6px;
-  padding: 4px 10px 4px 8px;
+  padding: 5px 12px 5px 10px;
   border-radius: 999px;
-  background: rgba(31,91,165,0.22);
-  border: 1px solid rgba(131,183,230,0.4);
-  color: var(--sky) !important;
+  /* opaque-enough fill so the pill never disappears over bright sky frames */
+  background: rgba(15, 76, 133, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: #ffffff !important;
   font-size: 11px !important;
-  letter-spacing: 0.06em;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  transition: background 200ms ease, border-color 200ms ease, transform 200ms ease;
 }
-.topbar__hiring:hover { color: #fff !important; background: rgba(31,91,165,0.32); }
+.topbar__hiring:hover {
+  background: rgba(31, 91, 165, 0.95);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-1px);
+}
 .topbar__hiring .dot {
-  width: 6px; height: 6px; border-radius: 50%;
-  background: var(--sky);
-  box-shadow: 0 0 8px rgba(131,183,230,0.9);
+  width: 7px; height: 7px; border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.95);
+  position: relative;
+  flex: 0 0 auto;
+}
+.topbar__hiring .dot::after {
+  content: ""; position: absolute; inset: -4px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  animation: hiring-pulse 1800ms cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+@keyframes hiring-pulse {
+  0%   { transform: scale(0.9); opacity: 0.9; }
+  70%  { transform: scale(1.9); opacity: 0; }
+  100% { transform: scale(1.9); opacity: 0; }
 }
 
 .topbar__cta {
@@ -1114,4 +1140,266 @@ body {
 @media (max-width: 1023px) {
   .hero--video .hero__tag { margin-top: 24px; }
   .tag { white-space: normal; font-size: 18px; }
+}
+
+/* ============================================================
+   Cinematic interior sections (video bg + glass panels)
+   + gradient stroke chrome on every card site-wide.
+   ============================================================ */
+
+/* ---- Video-bg section wrapper ---- */
+.section--bg-video {
+  position: relative;
+  padding: var(--s-10) 24px;
+  background: #000;
+  overflow: hidden;
+  isolation: isolate;
+  scroll-margin-top: 96px;
+  border-top: 1px solid var(--hairline);
+}
+.section--bg-video > .section__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+/* very subtle vignette so glass panels feel anchored, not floating */
+.section--bg-video::after {
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 110% 80% at 50% 50%, rgba(0,0,0,0) 30%, rgba(0,0,0,0.45) 100%);
+  z-index: 0;
+  pointer-events: none;
+}
+.section--bg-video > .section__inner,
+.section--bg-video > .section__inner--center {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---- Strong glass panel (interior content over video) ---- */
+.glass-panel {
+  position: relative;
+  background: rgba(0, 0, 0, 0.58);
+  background-blend-mode: luminosity;
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 24px;
+  padding: 64px 56px;
+  overflow: hidden;
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.08),
+    0 30px 80px rgba(0, 0, 0, 0.55);
+}
+.glass-panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.4px;
+  background: linear-gradient(180deg,
+    rgba(255,255,255,0.30) 0%,
+    rgba(255,255,255,0.10) 20%,
+    rgba(255,255,255,0)    40%,
+    rgba(255,255,255,0)    60%,
+    rgba(255,255,255,0.10) 80%,
+    rgba(255,255,255,0.30) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+.glass-panel > * { position: relative; z-index: 1; }
+
+@media (max-width: 768px) {
+  .glass-panel { padding: 40px 24px; border-radius: 20px; }
+}
+
+/* Philosophy & Careers — kill the previous radial-glow backgrounds when video takes over */
+.section--bg-video.section--philosophy,
+.section--bg-video.section--careers {
+  background: #000;
+}
+.section--bg-video .section--careers {
+  background: transparent;
+}
+
+/* When Philosophy is over a video, lift the pillar cards' chrome a notch */
+.section--bg-video .pillar { background: rgba(8, 8, 8, 0.7); }
+.section--bg-video .pillar:hover { background: rgba(15, 15, 15, 0.85); }
+
+/* Careers split inside a video section — keep two-column intent */
+.section--bg-video .careers__wrap { align-items: stretch; }
+.section--bg-video .careers__role  { background: rgba(8, 8, 8, 0.7); }
+
+/* ============================================================
+   Gradient-stroke chrome on every dark card (consistency layer)
+   Uses ::after so it stacks above the existing ::before halos.
+   ============================================================ */
+.stat,
+.card,
+.pillar,
+.person,
+.contact-card,
+.careers__role {
+  position: relative;
+}
+.stat::after,
+.card::after,
+.pillar::after,
+.person::after,
+.contact-card::after,
+.careers__role::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(180deg,
+    rgba(255,255,255,0.20) 0%,
+    rgba(255,255,255,0.05) 25%,
+    rgba(255,255,255,0)    50%,
+    rgba(255,255,255,0)    70%,
+    rgba(255,255,255,0.05) 90%,
+    rgba(255,255,255,0.18) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.85;
+  transition: opacity 300ms var(--ease-out);
+}
+.stat:hover::after,
+.card:hover::after,
+.pillar:hover::after,
+.person:hover::after,
+a.contact-card:hover::after,
+.careers__role:hover::after {
+  opacity: 1;
+}
+
+/* Section-content readability over video — stronger shadow now that
+   panels are gone and titles float directly on the footage. */
+.section--bg-video .section__title,
+.section--bg-video .section__lede,
+.section--bg-video .section__sub,
+.section--bg-video .eyebrow,
+.section--bg-video .hiring-pill,
+.section--bg-video .accent-text,
+.section--bg-video .pillar__h,
+.section--bg-video .pillar__p,
+.section--bg-video .careers__role-kicker,
+.section--bg-video .careers__role-title {
+  text-shadow:
+    0 2px 18px rgba(0, 0, 0, 0.75),
+    0 0 36px rgba(0, 0, 0, 0.55),
+    0 0 6px rgba(0, 0, 0, 0.35);
+}
+/* Section body copy gets an even denser shadow since it sits over the
+   brightest parts of the careers video. */
+.section--bg-video .section__sub,
+.section--bg-video .careers__copy p {
+  color: #e8eaef;
+  text-shadow:
+    0 1px 12px rgba(0, 0, 0, 0.85),
+    0 0 24px rgba(0, 0, 0, 0.6);
+}
+
+/* Reduce the section vignette so more of the footage shows through. */
+.section--bg-video::after {
+  background:
+    radial-gradient(ellipse 120% 90% at 50% 50%, rgba(0,0,0,0) 45%, rgba(0,0,0,0.35) 100%);
+}
+
+/* ---- Philosophy: floating pillar row ---- */
+.pillars--floating {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 64px;
+  text-align: left;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 1024px) { .pillars--floating { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px)  { .pillars--floating { grid-template-columns: 1fr; } }
+
+.section--bg-video .pillar {
+  background: rgba(0, 0, 0, 0.42);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 20px;
+}
+.section--bg-video .pillar:hover {
+  background: rgba(0, 0, 0, 0.55);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+.section--bg-video .pillar__h { color: #ffffff; }
+.section--bg-video .pillar__p { color: #e5e7eb; }
+
+/* Tighten Philosophy lede width so the giant "Diversification is key." can breathe */
+.section--philosophy .section__lede {
+  max-width: 640px;
+}
+
+/* ---- Careers: copy floats, role card stays glass (compact) ---- */
+.section--bg-video .careers__wrap {
+  align-items: start;
+}
+.section--bg-video .careers__copy {
+  /* no panel — just text on video */
+  padding: 0;
+}
+.section--bg-video .careers__role {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: 28px;
+  max-width: 480px;
+  margin-left: auto;
+}
+.section--bg-video .careers__role-title { color: #ffffff; }
+.section--bg-video .careers__role .meta-chip {
+  background: rgba(0, 0, 0, 0.45);
+  border-color: rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+}
+@media (max-width: 1024px) {
+  .section--bg-video .careers__role { margin-left: 0; max-width: 100%; }
+}
+
+/* Reset the older glass-panel rules on these sections so the global panel
+   styles don't accidentally re-apply to other elements. */
+.section--bg-video .glass-panel {
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+}
+.section--bg-video .glass-panel::before { display: none; }
+
+/* Hiring pill sitting inside Careers glass panel — give it a similar opaque treatment */
+.section--bg-video .hiring-pill {
+  background: rgba(15, 76, 133, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+.section--bg-video .hiring-pill__dot {
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.95);
+}
+.section--bg-video .hiring-pill__dot::after {
+  border-color: rgba(255, 255, 255, 0.6);
 }
