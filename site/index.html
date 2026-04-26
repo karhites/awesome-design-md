@@ -6,103 +6,93 @@
   <title>SilverSea Asset Management — Multi-Family Office, Singapore</title>
   <meta name="description" content="Based in Singapore, SilverSea Asset Management is a Multi-Family Office with strong asset management capabilities. Founded 2011. MAS Licence CMS100457-1." />
   <meta name="theme-color" content="#000000" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
-  <!-- Glass floating pill nav -->
-  <nav class="nav" aria-label="Primary">
-    <a class="nav__brand" href="#top" aria-label="SilverSea Asset Management">
-      <span class="nav__mark" aria-hidden="true"></span>
-      <span class="nav__wordmark">SilverSea</span>
-    </a>
-    <ul class="nav__links" role="list">
-      <li><a href="#about">About&nbsp;Us</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#philosophy">Philosophy</a></li>
-      <li><a href="#relationships">Relationships</a></li>
-      <li><a href="#team">Our&nbsp;Team</a></li>
-      <li>
-        <a href="#careers" class="nav__hiring" aria-label="Career opportunities — we are hiring">
-          <span class="dot" aria-hidden="true"></span>
-          We're hiring
-        </a>
-      </li>
-    </ul>
-    <a class="btn btn--primary btn--sm" href="#contact">Contact us</a>
-  </nav>
+  <!-- Sticky liquid-glass topbar -->
+  <header class="topbar" role="banner">
+    <nav class="topbar__bar liquid-glass" aria-label="Primary">
+      <a class="topbar__brand" href="#top" aria-label="SilverSea Asset Management">
+        <span class="topbar__mark" aria-hidden="true"></span>
+        <span class="topbar__word">SilverSea</span>
+      </a>
+      <ul class="topbar__links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#philosophy">Philosophy</a></li>
+        <li><a href="#relationships">Relationships</a></li>
+        <li>
+          <a href="#careers" class="topbar__hiring" aria-label="Career opportunities — we are hiring">
+            <span class="dot" aria-hidden="true"></span>
+            We're hiring
+          </a>
+        </li>
+      </ul>
+      <a class="topbar__cta" href="#contact">Contact us</a>
+    </nav>
+  </header>
 
   <main id="main">
 
-    <!-- HERO -->
-    <section class="hero" id="top">
-      <div class="hero__halo" aria-hidden="true"></div>
-      <div class="hero__inner">
-        <span class="eyebrow eyebrow--silver">For principals &amp; single-family offices · Singapore · Est.&nbsp;2011</span>
-        <h1 class="hero__ghost" aria-hidden="true">SilverSea</h1>
-        <h2 class="hero__title">
-          For the wealth <br/>
-          <span class="accent-text accent-text--silver">you've already built.</span>
-        </h2>
-        <p class="hero__lede">
-          SilverSea is a Singapore-based Multi-Family Office for accredited private
-          clients and family offices. Independent. Multi-custodian. Every asset held
-          in your own name. Regulated by the Monetary Authority of Singapore
-          (CMS100457-1).
-        </p>
-        <div class="hero__ctas">
-          <a class="btn btn--primary" href="#contact">Arrange a private introduction</a>
-          <a class="btn btn--chip" href="#philosophy">Our philosophy <span aria-hidden="true">›</span></a>
-        </div>
+    <!-- HERO with full-bleed video background -->
+    <section class="hero hero--video" id="top">
+      <video
+        class="hero__video"
+        autoplay
+        loop
+        muted
+        playsinline
+        preload="auto"
+        aria-hidden="true"
+      >
+        <source
+          src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260403_050628_c4e32401-fab4-4a27-b7a8-6e9291cd5959.mp4"
+          type="video/mp4"
+        />
+      </video>
 
-        <!-- Device mockup -->
-        <div class="mockup reveal" aria-hidden="true">
-          <div class="mockup__bezel">
-            <div class="mockup__chrome">
-              <span></span><span></span><span></span>
-            </div>
-            <div class="mockup__screen">
-              <div class="mockup__grid">
-                <div class="mockup__stat">
-                  <div class="mockup__label">Regulator</div>
-                  <div class="mockup__value">MAS · CMS100457-1</div>
-                  <div class="mockup__delta mockup__delta--neu">Singapore · capital-markets licensed</div>
-                </div>
-                <div class="mockup__stat">
-                  <div class="mockup__label">Client base</div>
-                  <div class="mockup__value">Accredited only</div>
-                  <div class="mockup__delta mockup__delta--up">Principals &amp; family offices</div>
-                </div>
-                <div class="mockup__stat">
-                  <div class="mockup__label">Custody model</div>
-                  <div class="mockup__value">LPOA, your bank</div>
-                  <div class="mockup__delta mockup__delta--neu">Assets held in your name</div>
-                </div>
-              </div>
-              <div class="mockup__spark" aria-hidden="true">
-                <svg viewBox="0 0 800 120" preserveAspectRatio="none">
-                  <defs>
-                    <linearGradient id="sparkFill" x1="0" x2="0" y1="0" y2="1">
-                      <stop offset="0%" stop-color="#83B7E6" stop-opacity="0.28"/>
-                      <stop offset="100%" stop-color="#83B7E6" stop-opacity="0"/>
-                    </linearGradient>
-                  </defs>
-                  <path d="M0 90 L60 80 L120 86 L200 70 L280 74 L360 58 L440 64 L520 44 L600 52 L680 32 L760 38 L800 24 L800 120 L0 120 Z" fill="url(#sparkFill)"/>
-                  <path d="M0 90 L60 80 L120 86 L200 70 L280 74 L360 58 L440 64 L520 44 L600 52 L680 32 L760 38 L800 24" fill="none" stroke="#83B7E6" stroke-width="1.5"/>
-                </svg>
-              </div>
-              <div class="mockup__toolbar">
-                <span class="tkr">SGX</span>
-                <span class="tkr">HKEX</span>
-                <span class="tkr">NYSE</span>
-                <span class="tkr">LSE</span>
-                <span class="tkr">SIX</span>
-                <span class="tkr tkr--dim">· Monetary Authority of Singapore</span>
-              </div>
+      <div class="hero__content">
+        <div class="hero__grid">
+          <div class="hero__copy">
+            <h1
+              class="hero__title h-anim"
+              data-text="For the wealth\nyou've already built."
+              data-initial="200"
+              data-char-delay="30"
+              aria-label="For the wealth you've already built."
+            >For the wealth<br/>you've already built.</h1>
+
+            <p
+              class="hero__sub fade-in"
+              data-delay="800"
+              data-duration="1000"
+            >
+              An independent, Singapore-based Multi-Family Office for accredited
+              principals and single-family offices since 2011.
+            </p>
+
+            <div
+              class="hero__btns fade-in"
+              data-delay="1200"
+              data-duration="1000"
+            >
+              <a class="btn-pri" href="#contact">Arrange a private introduction</a>
+              <a class="btn-glass liquid-glass" href="#philosophy">Our philosophy</a>
             </div>
           </div>
-          <div class="mockup__horizon" aria-hidden="true"></div>
+
+          <aside
+            class="hero__tag fade-in"
+            data-delay="1400"
+            data-duration="1000"
+          >
+            <div class="tag liquid-glass">Stewardship. Investments. Advisory.</div>
+          </aside>
         </div>
       </div>
     </section>

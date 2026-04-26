@@ -1,12 +1,62 @@
-/* SilverSea — small runtime:
-   - IntersectionObserver reveal (DESIGN.md §7)
-   - Light cursor halo on service cards
-   - Respects prefers-reduced-motion */
+/* SilverSea — runtime
+   - Char-by-char heading animation (per video-hero spec)
+   - Staggered fade-ins on subhead / buttons / tag
+   - IntersectionObserver reveal for downstream sections
+   - Card cursor halo, smooth-scroll
+   Honors prefers-reduced-motion. */
 
 (() => {
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Reveal-on-scroll
+  // ---------- Animated heading ----------
+  const heading = document.querySelector('.h-anim');
+  if (heading) {
+    const raw = heading.dataset.text || heading.textContent || '';
+    // Attribute string is "...\\n..." (literal backslash + n). Split on that.
+    const lines = raw.split('\\n');
+    const initial = parseInt(heading.dataset.initial || '200', 10);
+    const charDelay = parseInt(heading.dataset.charDelay || '30', 10);
+
+    heading.innerHTML = '';
+    lines.forEach((line, lineIdx) => {
+      const lineEl = document.createElement('span');
+      lineEl.className = 'h-line';
+      const lineLen = line.length;
+      for (let i = 0; i < line.length; i++) {
+        const ch = line[i];
+        const span = document.createElement('span');
+        span.className = 'ch';
+        span.setAttribute('aria-hidden', 'true');
+        span.textContent = ch === ' ' ? ' ' : ch;
+        const delay = initial + (lineIdx * lineLen * charDelay) + (i * charDelay);
+        span.style.transitionDelay = delay + 'ms';
+        lineEl.appendChild(span);
+      }
+      heading.appendChild(lineEl);
+    });
+
+    if (reduce) {
+      heading.classList.add('lit');
+    } else {
+      requestAnimationFrame(() =>
+        requestAnimationFrame(() => heading.classList.add('lit'))
+      );
+    }
+  }
+
+  // ---------- Staggered fade-ins ----------
+  document.querySelectorAll('.fade-in').forEach((el) => {
+    const delay = parseInt(el.dataset.delay || '0', 10);
+    const duration = parseInt(el.dataset.duration || '1000', 10);
+    el.style.transitionDuration = duration + 'ms';
+    if (reduce) {
+      el.classList.add('lit');
+    } else {
+      setTimeout(() => el.classList.add('lit'), delay);
+    }
+  });
+
+  // ---------- Reveal-on-scroll for downstream sections ----------
   const targets = document.querySelectorAll('.reveal');
   if (!reduce && 'IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => {
@@ -22,7 +72,7 @@
     targets.forEach((el) => el.classList.add('is-visible'));
   }
 
-  // Card cursor halo
+  // ---------- Card cursor halo ----------
   if (!reduce) {
     document.querySelectorAll('.card').forEach((card) => {
       card.addEventListener('pointermove', (ev) => {
@@ -37,7 +87,7 @@
     });
   }
 
-  // Smooth-scroll with nav offset for in-page anchors
+  // ---------- In-page anchor smooth scroll ----------
   document.querySelectorAll('a[href^="#"]').forEach((a) => {
     a.addEventListener('click', (e) => {
       const id = a.getAttribute('href');
@@ -45,7 +95,7 @@
       const el = document.querySelector(id);
       if (!el) return;
       e.preventDefault();
-      const top = el.getBoundingClientRect().top + window.scrollY - 72;
+      const top = el.getBoundingClientRect().top + window.scrollY - 80;
       window.scrollTo({ top, behavior: reduce ? 'auto' : 'smooth' });
     });
   });
