@@ -1,0 +1,229 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - navigation "Primary" [ref=e3]:
+    - link "SilverSea home" [ref=e4] [cursor=pointer]:
+      - /url: "#top"
+      - generic [ref=e6]: SilverSea
+    - list [ref=e7]:
+      - listitem [ref=e8]:
+        - link "About" [ref=e9] [cursor=pointer]:
+          - /url: "#about"
+      - listitem [ref=e10]:
+        - link "Services" [ref=e11] [cursor=pointer]:
+          - /url: "#services"
+      - listitem [ref=e12]:
+        - link "Philosophy" [ref=e13] [cursor=pointer]:
+          - /url: "#philosophy"
+      - listitem [ref=e14]:
+        - link "Relationships" [ref=e15] [cursor=pointer]:
+          - /url: "#relationships"
+      - listitem [ref=e16]:
+        - link "Team" [ref=e17] [cursor=pointer]:
+          - /url: "#team"
+    - link "Contact" [ref=e18] [cursor=pointer]:
+      - /url: "#contact"
+  - main [ref=e19]:
+    - generic [ref=e21]:
+      - generic [ref=e22]: Singapore · Multi-Family Office · Est. 2011
+      - heading [level=1]: SilverSea
+      - heading "Quiet stewardship of private capital." [level=2] [ref=e23]
+      - paragraph [ref=e24]: Based in Singapore, SilverSea Asset Management is a Multi-Family Office with strong asset management capabilities — serving qualified global accredited private clients and family offices since 2011.
+      - generic [ref=e25]:
+        - link "Arrange a conversation" [ref=e26] [cursor=pointer]:
+          - /url: "#contact"
+        - link "Our philosophy" [ref=e27] [cursor=pointer]:
+          - /url: "#philosophy"
+          - text: Our philosophy
+          - generic [ref=e28]: ›
+      - generic [ref=e35]:
+        - generic [ref=e36]:
+          - generic [ref=e37]:
+            - generic [ref=e38]: Total AUM (representative)
+            - generic [ref=e39]: $1,284,067,182
+            - generic [ref=e40]: ▲ 4.82% YTD
+          - generic [ref=e41]:
+            - generic [ref=e42]: Client portfolios
+            - generic [ref=e43]: "142"
+            - generic [ref=e44]: Across 11 jurisdictions
+          - generic [ref=e45]:
+            - generic [ref=e46]: Custodian banks
+            - generic [ref=e47]: "9"
+            - generic [ref=e48]: Client-selected, LPOA only
+        - img [ref=e50]
+        - generic [ref=e53]:
+          - generic [ref=e54]: SGX
+          - generic [ref=e55]: HKEX
+          - generic [ref=e56]: NYSE
+          - generic [ref=e57]: LSE
+          - generic [ref=e58]: SIX
+          - generic [ref=e59]: · regulated by MAS · CMS100457-1
+    - generic [ref=e62]:
+      - generic [ref=e63]: About
+      - heading "Fifteen years of disciplined capital." [level=2] [ref=e64]
+      - paragraph [ref=e65]: Founded in 2011, SilverSea provides financial services to qualified global accredited private clients and family offices — regulated by the Monetary Authority of Singapore under licence CMS100457-1.
+      - generic [ref=e66]:
+        - generic [ref=e67]:
+          - generic [ref=e68]: "2011"
+          - generic [ref=e69]: Year founded in Singapore
+        - generic [ref=e70]:
+          - generic [ref=e71]: MAS
+          - generic [ref=e72]: Regulated · CMS100457-1
+        - generic [ref=e73]:
+          - generic [ref=e74]: Global
+          - generic [ref=e75]: Accredited private clients & family offices
+    - generic [ref=e77]:
+      - generic [ref=e78]:
+        - generic [ref=e79]: Services
+        - heading "Bespoke solutions, built by listening." [level=2] [ref=e80]
+        - paragraph [ref=e81]: By listening to your needs and objectives, we work with you to create a bespoke investment solution — not a product shelf.
+      - generic [ref=e82]:
+        - article [ref=e83]:
+          - generic [ref=e84]: "01"
+          - heading "Multi-Family Office" [level=3] [ref=e85]
+          - paragraph [ref=e86]: Estate planning, legacy planning and insurance coordination across generations and jurisdictions.
+          - list [ref=e87]:
+            - listitem [ref=e88]: Intergenerational structuring
+            - listitem [ref=e89]: Legacy & succession
+            - listitem [ref=e90]: Insurance coordination
+        - article [ref=e91]:
+          - generic [ref=e92]: "02"
+          - heading "Independent Advice" [level=3] [ref=e93]
+          - paragraph [ref=e94]: Access to investment opportunities through an extensive network of managers, banks and partners — aligned to you, not to shelf economics.
+          - list [ref=e95]:
+            - listitem [ref=e96]: Open-architecture access
+            - listitem [ref=e97]: Independent due diligence
+            - listitem [ref=e98]: Conflict-free recommendations
+        - article [ref=e99]:
+          - generic [ref=e100]: "03"
+          - heading "Private Banks" [level=3] [ref=e101]
+          - paragraph [ref=e102]: Clients select their own custodian bank; SilverSea holds a Limited Power of Attorney only. Assets never leave your name.
+          - list [ref=e103]:
+            - listitem [ref=e104]: Client-selected custodian
+            - listitem [ref=e105]: LPOA mandate only
+            - listitem [ref=e106]: Full ownership retained
+        - article [ref=e107]:
+          - generic [ref=e108]: "04"
+          - heading "Discretionary & Advisory Mandates" [level=3] [ref=e109]
+          - paragraph [ref=e110]: Investment management aligned with your goals — whether you prefer full delegation or a collaborative advisory relationship.
+          - list [ref=e111]:
+            - listitem [ref=e112]: Discretionary portfolios
+            - listitem [ref=e113]: Advisory mandates
+            - listitem [ref=e114]: Custom risk frameworks
+    - generic [ref=e116]:
+      - generic [ref=e117]: Investment philosophy
+      - heading "Diversification is key." [level=2] [ref=e118]
+      - paragraph [ref=e119]: Rigorous due diligence and evaluation processes are applied to each investment opportunity. Understanding and managing the downside risk is essential — capital preservation comes before capital growth.
+      - generic [ref=e120]:
+        - generic [ref=e121]:
+          - heading "Absolute returns" [level=3] [ref=e123]
+          - paragraph [ref=e124]: Aim for positive returns across cycles — not benchmark-hugging.
+        - generic [ref=e125]:
+          - heading "Hedged exposures" [level=3] [ref=e127]
+          - paragraph [ref=e128]: Long/short positioning to temper drawdowns and isolate conviction.
+        - generic [ref=e129]:
+          - heading "Diversification" [level=3] [ref=e131]
+          - paragraph [ref=e132]: Across asset classes, geographies, managers and time horizons.
+        - generic [ref=e133]:
+          - heading "Downside discipline" [level=3] [ref=e135]
+          - paragraph [ref=e136]: Position sizing and risk budgeting governed by loss tolerance, not upside dreams.
+    - generic [ref=e138]:
+      - generic [ref=e139]:
+        - generic [ref=e140]: Relationships
+        - heading "Established with reputable private banks." [level=2] [ref=e141]
+        - paragraph [ref=e142]: Assets are custodized at the bank you choose. SilverSea operates under a Limited Power of Attorney — you retain full control and ownership of your assets at all times.
+        - list [ref=e143]:
+          - listitem [ref=e144]: Client-selected custodian bank
+          - listitem [ref=e146]: Limited Power of Attorney only
+          - listitem [ref=e148]: Assets held in client's name
+          - listitem [ref=e150]: Independent reporting & reconciliation
+      - complementary [ref=e152]:
+        - generic [ref=e153]:
+          - generic [ref=e155]: UBS
+          - generic [ref=e156]: Julius Baer
+          - generic [ref=e157]: Pictet
+          - generic [ref=e158]: Credit Suisse
+          - generic [ref=e159]: HSBC
+          - generic [ref=e160]: DBS
+          - generic [ref=e161]: BNP
+          - generic [ref=e162]: LGT
+        - generic [ref=e163]: Representative custodian relationships. Client chooses the bank; SilverSea executes under LPOA.
+    - generic [ref=e165]:
+      - generic [ref=e166]:
+        - generic [ref=e167]: Who we are
+        - heading "Partners, advisors, operators." [level=2] [ref=e168]
+        - paragraph [ref=e169]: A small team with deep private-banking and asset-management pedigrees — built to sit on the client's side of the table.
+      - generic [ref=e170]:
+        - figure "Thomas Anderegg CEO & CIO · Founding Partner" [ref=e171]:
+          - generic [ref=e173]: TA
+          - generic [ref=e174]:
+            - generic [ref=e175]: Thomas Anderegg
+            - generic [ref=e176]: CEO & CIO · Founding Partner
+        - figure "Axel Ritter COO · Founding Partner" [ref=e177]:
+          - generic [ref=e179]: AR
+          - generic [ref=e180]:
+            - generic [ref=e181]: Axel Ritter
+            - generic [ref=e182]: COO · Founding Partner
+        - figure "Antoine Foetisch Partner · Wealth Advisor" [ref=e183]:
+          - generic [ref=e185]: AF
+          - generic [ref=e186]:
+            - generic [ref=e187]: Antoine Foetisch
+            - generic [ref=e188]: Partner · Wealth Advisor
+        - figure "Yoad Reiter Partner · Wealth Advisor" [ref=e189]:
+          - generic [ref=e191]: YR
+          - generic [ref=e192]:
+            - generic [ref=e193]: Yoad Reiter
+            - generic [ref=e194]: Partner · Wealth Advisor
+        - figure "Max Anderl Lead Portfolio Manager" [ref=e195]:
+          - generic [ref=e197]: MA
+          - generic [ref=e198]:
+            - generic [ref=e199]: Max Anderl
+            - generic [ref=e200]: Lead Portfolio Manager
+        - figure "Veronica Yip Wealth Advisor" [ref=e201]:
+          - generic [ref=e203]: VY
+          - generic [ref=e204]:
+            - generic [ref=e205]: Veronica Yip
+            - generic [ref=e206]: Wealth Advisor
+        - figure "Alvina Chow Wealth Advisor" [ref=e207]:
+          - generic [ref=e209]: AC
+          - generic [ref=e210]:
+            - generic [ref=e211]: Alvina Chow
+            - generic [ref=e212]: Wealth Advisor
+        - figure "Jerryln Chua Management Assistant" [ref=e213]:
+          - generic [ref=e215]: JC
+          - generic [ref=e216]:
+            - generic [ref=e217]: Jerryln Chua
+            - generic [ref=e218]: Management Assistant
+    - generic [ref=e220]:
+      - generic [ref=e221]: Contact
+      - heading "Let's have a quiet conversation." [level=2] [ref=e222]
+      - paragraph [ref=e223]: We work with a small number of clients. If you would like to explore whether a relationship makes sense, please reach out directly.
+      - generic [ref=e224]:
+        - link "Email info@silverseaam.com" [ref=e225] [cursor=pointer]:
+          - /url: mailto:info@silverseaam.com
+          - generic [ref=e226]: Email
+          - generic [ref=e227]: info@silverseaam.com
+        - link "Phone +65 6950 0692" [ref=e228] [cursor=pointer]:
+          - /url: tel:+6569500692
+          - generic [ref=e229]: Phone
+          - generic [ref=e230]: +65 6950 0692
+        - generic [ref=e231]:
+          - generic [ref=e232]: Office
+          - generic [ref=e233]:
+            - text: "3 Temasek Avenue, #18-22"
+            - text: Centennial Tower, Singapore 039190
+      - link "Request an introduction" [ref=e234] [cursor=pointer]:
+        - /url: mailto:info@silverseaam.com
+  - contentinfo [ref=e235]:
+    - generic [ref=e236]:
+      - generic [ref=e237]: © 2011–2026 SilverSea Asset Management Pte Ltd · MAS Licence CMS100457-1
+      - navigation "Footer" [ref=e238]:
+        - link "About" [ref=e239] [cursor=pointer]:
+          - /url: "#about"
+        - link "Services" [ref=e240] [cursor=pointer]:
+          - /url: "#services"
+        - link "Philosophy" [ref=e241] [cursor=pointer]:
+          - /url: "#philosophy"
+        - link "Contact" [ref=e242] [cursor=pointer]:
+          - /url: "#contact"
+    - generic [ref=e243]: This website does not constitute an investment proposal.
